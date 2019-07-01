@@ -13,7 +13,7 @@
 
 # URLS
 ## Get all Planets
-### GET/planets 
+## GET/planets 
 ### Response: 
 ```
 [
