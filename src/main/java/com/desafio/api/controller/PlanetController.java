@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +48,7 @@ public class PlanetController {
     }
 
     @PostMapping("")
-    public ResponseEntity<Object> createPlanet(@RequestBody Planet planet) {
+    public ResponseEntity<Object> createPlanet(@Valid @RequestBody Planet planet) {
         if (planetService.findByName(planet.getName()).isPresent()){return ResponseEntity.status(HttpStatus.CONFLICT).build();}
 
         Planet planetCreated = planetService.savePlanet(planet);

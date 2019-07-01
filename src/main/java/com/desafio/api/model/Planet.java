@@ -5,19 +5,20 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
+
 @NoArgsConstructor
 @Getter @Setter
 @ToString
 @Document(collection = "planets")
 public class Planet {
     @Id
-    @NonNull
     private String id;
-    @NonNull @Indexed(unique = true)
+    @NotNull @Indexed(unique = true)
     private String name;
-    @NonNull
+    @NotNull
     private String climate;
-    @NonNull
+    @NotNull
     private String terrain;
 
     private int appearances;
