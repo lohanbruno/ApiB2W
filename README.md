@@ -12,6 +12,14 @@
 - To run tests use **mvn test**
 
 # URLS
+## Health check our api
+## GET/health
+### Response:
+```
+{
+  'status': UP
+}
+```
 ## Get all Planets
 ## GET/planets 
 ### Response: 
