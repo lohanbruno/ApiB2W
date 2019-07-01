@@ -1,14 +1,14 @@
 # API Stars Wars
 
-# Requirements
+# Prerequisites
 
 - Java 8
 - Maven
 - MongoDB
 
 # How to use 
-- Launch MongoDB at default port by typing **mongod** on your terminal.
-- Inside the project's folder, type **mvn spring-boot:run** on your terminal to launch the application.
+- Launch MongoDB at default port by typing **mongod** in your terminal.
+- Inside the project's folder, type **mvn spring-boot:run** in your terminal to launch the application.
 - To run tests use **mvn test**
 
 # URLS
@@ -91,7 +91,7 @@ If there's no planet with that name
     "terrain": "cityscape, mountains"
 }
 ```
-### Reponse: 200 OK
+### Reponse: 201 Created
 ```
 {
   "id": "5d194e9ef067ed1738eb3e79",
@@ -116,7 +116,6 @@ If it finds a planet with that id
 
 ### Reponse: 404 Not Found
 If there's no planet with that id
-
 
 
 
